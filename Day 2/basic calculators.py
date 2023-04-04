@@ -9,7 +9,7 @@ choice = input()
 if choice == "1":
     # two digit calculator
     userinput = input("Type a two digit number: ")
-    if len(userinput ) <2 or len(userinput ) >2:
+    if len(userinput) < 2 or len(userinput) > 2:
         print("invalid number")
     else:
         A = userinput[0]
