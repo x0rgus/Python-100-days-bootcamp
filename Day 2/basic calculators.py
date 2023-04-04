@@ -20,9 +20,7 @@ elif choice == "2":
     # bmi calculator
     height = input("enter your height in m: ")
     weight = input("enter your weight in kg: ")
-    heighttemp = float(height)
-    weighttemp = int(weight)
-    bmi = weighttemp / (heighttemp * heighttemp)
+    bmi = int(weight) / (float(height)**2)
     bmi = round(bmi)
     str(bmi)
     print(bmi)
