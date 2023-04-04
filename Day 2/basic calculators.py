@@ -2,8 +2,10 @@ print("basic calculators")
 print("Choose by typing the corresponding number")
 print("1-Two digit calculator")
 print("2-BMI calculator")
-print("")
+print("3-Life in years/months/weeks")
 choice = input()
+
+
 if choice == "1":
     # two digit calculator
     userinput = input("Type a two digit number: ")
@@ -24,3 +26,11 @@ elif choice == "2":
     bmi = round(bmi)
     str(bmi)
     print(bmi)
+
+elif choice == "3":
+    age = input("What is your current age? ")
+    time_remaining = 90 - int(age)
+    days = time_remaining * 365
+    weeks = time_remaining * 52
+    months = time_remaining * 12
+    print(f"You have {days} days, {weeks} weeks, and {months} months left.")
