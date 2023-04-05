@@ -79,32 +79,30 @@ if choice == "4":
         age = int(input("what is your age?"))
         if age < 12:
             bill = bill + 5
-            print("Your ticket will be 5$")
+            print(f"Your ticket will be \u001b[32;1m{bill}\u001b[0m")
         elif age <= 18:
             bill = bill + 7
-            print("Your ticket will be 7$")
+            print(f"Your ticket will be \u001b[32;1m{bill}\u001b[0m")
         elif age > 18:
             bill = bill + 12
-            print("Your ticket will be 12$")
+            print(f"Your ticket will be \u001b[32;1m{bill}\u001b[0m")
 
-        wants_photo = str(input("Do you want photos of the ride? price: 3$ (Y/N)"))
+        wants_photo = str(input("Do you want photos of the ride? price: \u001b[32;1m3$\u001b[0m (Y/N)"))
 
         if wants_photo == "Y" or wants_photo == "y":
             bill += 3
 
-        print(f"Total price:{bill}")
+        print(f"Total price:\u001b[32;1m${bill}\u001b[0m")
     else:
-        print("you cant ride the rollercoaster")
+        print("\u001b[31;1myou cant ride the rollercoaster\u001b[0m")
 
 if choice == "5":
-    # Small Pizza: $15
-    # Medium Pizza: $20
-    # Large Pizza: $25
-
-    # Pepperoni for Small Pizza: +$2
-    # Pepperoni for Medium or Large Pizza: +$3
-
-    # Extra cheese for any size pizza: + $1
+    print("Small Pizza: \u001b[32;1m$15\u001b[0m")
+    print("Medium Pizza: \u001b[32;1m$20\u001b[0m")
+    print("Large Pizza: \u001b[32;1m$25\u001b[0m")
+    print("Pepperoni for Small Pizza: \u001b[32;1m+$2\u001b[0m")
+    print("Pepperoni for Medium or Large Pizza: \u001b[32;1m+$3\u001b[0m")
+    print("Extra cheese for any size pizza: \u001b[32;1m+$1\u001b[0m")
 
     size = input("What size pizza do you want? S, M, or L ")
     add_pepperoni = input("Do you want pepperoni? Y or N ")
@@ -128,7 +126,7 @@ if choice == "5":
     if extra_cheese == "Y" or extra_cheese == "y":
         bill += 1
 
-    print(f"Your final bill is: ${bill}.")
+    print(f"Your final bill is: \u001b[32;1m${bill}\u001b[0m.")
 
 else:
     print("invalid choice")
