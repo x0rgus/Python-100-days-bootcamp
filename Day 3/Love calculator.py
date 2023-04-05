@@ -14,7 +14,7 @@ finalcount = str(count1) + str(count2)
 finalcount = int(finalcount)
 if finalcount < 10 or finalcount > 90:
     print(f"Your score is {finalcount}, you go together like coke and mentos.")
-elif finalcount > 40 and  finalcount < 50:
+elif 40 < finalcount < 50:
     print(f"Your score is {finalcount}, you are alright together.")
 else:
     print(f"Your score is {finalcount}.")
