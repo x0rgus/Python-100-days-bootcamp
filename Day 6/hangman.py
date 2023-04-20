@@ -43,8 +43,8 @@ while matches < len(word) and lives > 0:
     print(display)
 if lives == 0:
     print(HANGMANPICS[hangman_pointer])
-    print("you lose!")
+    print("\u001b[31;1myou lose!\u001b[0m")
 else:
-    print("You win!")
+    print("\u001b[36;1mYou win!\u001b[0m")
 # replaces empty letter in display with correct letter
 

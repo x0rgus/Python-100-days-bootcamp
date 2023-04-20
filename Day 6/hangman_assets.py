@@ -1,4 +1,4 @@
-HANGMANPICS = ['''
+HANGMANPICS = ['''\033[1;37m
   +---+
   |   |
       |
@@ -47,7 +47,7 @@ HANGMANPICS = ['''
  /|\  |
  / \  |
       |
-=========letter:''']
+=========letter:\u001b[0m''']
 
 #Word list of animals
 words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
