@@ -28,8 +28,9 @@ lives = 6
 while matches < len(word) and lives > 0:
     print(HANGMANPICS[hangman_pointer], end="")
     print(display)
-    userinput = input(f"\n Please type a letter (the solution is {word}")
+    userinput = input(f"\n Please type a letter (the solution is {word} \n")
     userinput = userinput.lower()
+    print("\n\n\n\n\n\n\n\n\n")
     time.sleep(1)
     if userinput in word:
         for position in range(len(word)):
