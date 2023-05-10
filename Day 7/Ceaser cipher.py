@@ -3,8 +3,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
             'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-
-
 def crypt(input_text, shift_amount, choice):
     if choice == "encode":
         cipher_text = ""
@@ -28,6 +26,9 @@ def crypt(input_text, shift_amount, choice):
             except ValueError:
                 plain_text += letter
         print(f"The decoded text is {plain_text}")
+    else:
+        print("Invalid choice!")
+
 
 run = True
 greet = ''' _____                                 _       _               
@@ -51,8 +52,3 @@ while run:
         run = False
     else:
         run
-
-
-
-
-
