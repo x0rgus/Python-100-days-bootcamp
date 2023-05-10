@@ -26,7 +26,7 @@ def crypt(input_text, shift_amount, choice):
             except ValueError:
                 plain_text += letter
         print(f"The decoded text is {plain_text}")
-    else:
+    if not choice == "decode" and not choice == "encode":
         print("Invalid choice!")
 
 
@@ -48,7 +48,7 @@ while run:
     shift = int(input("Type the shift number:\n"))
     crypt(input_text=text, shift_amount=shift, choice=direction)
     answer = input(print("Run again? (Y/N)")).lower()
-    if answer == "n":
+    if answer == "n" or "no":
         run = False
     else:
         run
