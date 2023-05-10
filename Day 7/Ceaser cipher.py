@@ -48,7 +48,7 @@ while run:
     shift = int(input("Type the shift number:\n"))
     crypt(input_text=text, shift_amount=shift, choice=direction)
     answer = input(print("Run again? (Y/N)")).lower()
-    if answer == "n" or "no":
+    if answer == "n":
         run = False
     else:
         run
