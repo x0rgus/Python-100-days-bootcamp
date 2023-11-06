@@ -23,7 +23,8 @@ while state == 0:
     match state:
         case 0:
             person1, person2 = generate_person()
-            print(person1, person2)
+            # print(person1, person2)
+            # use to debug
             print(f"You have {points} Points!")
             print("Does {name} ({description}) ({follower_count} Followers) has more followers than ".format(**person1),
                   end="")
