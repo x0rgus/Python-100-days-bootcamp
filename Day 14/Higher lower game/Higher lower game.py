@@ -4,8 +4,8 @@ import random
 
 
 def generate_person():
-    person1, person2 = random.choice(data), random.choice(data)
-    return person1, person2
+    person = random.choice(data)
+    return person
 
 
 def high_low(count1, count2):
@@ -18,11 +18,14 @@ def high_low(count1, count2):
 points = 0
 state = 0
 print(logo)
-
+person1 = generate_person()
+person2 = generate_person()
 while state == 0:
     match state:
         case 0:
-            person1, person2 = generate_person()
+            if points > 0:
+                person1 = person2
+                person2 = generate_person()
             # print(person1, person2)
             # use to debug
             print(f"You have {points} Points!")
