@@ -27,7 +27,7 @@ def draw_shape(num_sides):
         t1.right(angle)
 # if less than 3 sides its just a line so range starts from there
 
-for shape in range(3, 8):
+for shape in range(3,10):
     t1.color(random.choice(colors))
     draw_shape(shape)
     t1.reset()
