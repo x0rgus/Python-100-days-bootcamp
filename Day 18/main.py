@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
-
+import random
+colors = ["red","blue","green","yellow","purple"]
 t1 = Turtle()
 t1.shape("classic")
 t1.color("red")
@@ -25,8 +26,12 @@ def draw_shape(num_sides):
         t1.forward(100)
         t1.right(angle)
 # if less than 3 sides its just a line so range starts from there
+
 for shape in range(3, 8):
-    print(shape)
+    t1.color(random.choice(colors))
+    draw_shape(shape)
+    t1.reset()
+
 
 
 
