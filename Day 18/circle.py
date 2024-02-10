@@ -17,11 +17,15 @@ def get_random_color():
     b = random.randint(0,255)
     color = (r, g, b)
     return color
+def draw_spirograph(size):
+    for x in range(int(360 / size)):
+        t1.color(get_random_color())
+        t1.left(size)
+        t1.circle(150)
 
-for x in range(360):
-    t1.color(get_random_color())
-    t1.left(1)
-    t1.circle(150)
+for x in reversed(range(1,360, 10)):
+    draw_spirograph(x)
+
 
 
 screen = Screen()
