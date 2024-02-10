@@ -1,10 +1,28 @@
+import turtle
 from turtle import Turtle, Screen
 import random
 
-colors = ["red", "blue", "green", "yellow", "purple", "black", "orange"]
 t1 = Turtle()
 t1.shape("classic")
 DEFAULT_WALK = 25
+turtle.colormode(255)
+colors = []
+t1.pensize(10)
+t1.speed("fastest")
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    color = (r, g, b)
+    return color
+
+
+def random_color_construct_list():
+    for color in range(100):
+        color = random_color()
+        colors.append(color)
 
 
 def x_up():
@@ -27,7 +45,9 @@ def x_right():
 
 list_moves = [x_up, x_down, x_left, x_right]
 
-for x in range(100):
+random_color_construct_list()
+
+for x in range(1000):
     t1.color(random.choice(colors))
     random.choice(list_moves)()
 
