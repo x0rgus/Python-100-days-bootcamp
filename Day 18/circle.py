@@ -1,6 +1,6 @@
 import turtle
 from turtle import Turtle, Screen
-import random
+import random, colorgram
 
 t1 = Turtle()
 t1.shape("classic")
