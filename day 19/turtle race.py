@@ -1,4 +1,4 @@
-import random
+import random, time
 from turtle import Turtle, Screen
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -21,9 +21,22 @@ if user_bet:
     race = True
 while race:
     for turtle in turtles:
+        if turtle.xcor() > 230:
+            win_color = turtle.pencolor()
+            if win_color == user_bet:
+                print(f"You've won! the {win_color} turtle is the winner!")
+
+                time.sleep(2)
+
+                exit(0)
+            else:
+                print(f"You've lose! the {win_color} turtle is the winner!")
+                time.sleep(2)
+
+                exit(0)
         rand_distance = random.randint(0, 10)
         turtle.forward(rand_distance)
-
+race = False
 
 
 
