@@ -3,7 +3,7 @@ from snake import Snake
 import time
 
 # Snake Setup
-snake = Snake(debug=False)
+snake = Snake(debug=True)
 snake.create_snake()
 
 # Screen setup
@@ -13,6 +13,7 @@ screen.bgcolor("black")
 screen.title("snake game")
 screen.tracer(0)
 REFRESHRATE = 0.4
+screen.listen()
 
 # Game configs
 def tickrate():
@@ -20,7 +21,9 @@ def tickrate():
     time.sleep(REFRESHRATE)
 
 
+screen.onkeypress(fun=lambda: snake.turn(direction="left"), key="a")
 
+screen.onkeypress(fun=lambda: snake.turn(direction="right"), key="d")
 
 game_is_on = True
 

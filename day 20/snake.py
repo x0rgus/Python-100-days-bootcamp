@@ -58,12 +58,15 @@ class Snake():
         self.log("done")
        
     def turn(self, direction):
+        """Turns head based on direction"""
+        self.log(f"Turning snake in direction:{direction}...")
         # turns the head
         match direction:
             case "left":
                 self.segments[0].left(90)
+                self.log("Turning left done")
             case "right":
                 self.segments[0].right(90)
-                
+                self.log("Turning right done")
     
     
