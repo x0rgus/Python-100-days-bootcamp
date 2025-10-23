@@ -11,17 +11,18 @@ logger = logging.getLogger(__name__)
 print(logger)
 class Snake():
     """Snake class with methods to create and move a snake, starts unalive by default"""
-    def __init__(self, debug) -> None:
+    def __init__(self, debug: bool = False ) -> None:
         self.debug = debug
         self.starting_positions = [(0, 0), (-20, 0), (-40, 0)]
         self.snake_alive = False
         self.segments = []
-    def debug_handler(self, output):
+    def log(self, message: str):
+        """Logs messages while debug is on"""
         if self.debug == True:
-            logger.info(output)
+            logger.info(message)
     def create_snake(self):
         """Creates a snake and sets it status to alive, creates the body and appends it to the segments"""
-        self.debug_handler("Creating a snake")
+        self.log("Creating a snake")
         self.snake_alive = True
         for position in self.starting_positions:
             new_segment = Turtle("square")
