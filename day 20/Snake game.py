@@ -21,7 +21,7 @@ def tickrate():
     time.sleep(REFRESHRATE)
 
 
-screen.onkeypress(fun=lambda: snake.turn(direction="left"), key="a")
+screen.onkeypress(fun=lambda: snake.turn(direction="Left"), key="a")
 
 screen.onkeypress(fun=lambda: snake.turn(direction="right"), key="d")
 

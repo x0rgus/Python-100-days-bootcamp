@@ -59,6 +59,7 @@ class Snake():
        
     def turn(self, direction):
         """Turns head based on direction"""
+        direction = direction.lower()
         self.log(f"Turning snake in direction:{direction}...")
         # turns the head
         match direction:
