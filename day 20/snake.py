@@ -17,12 +17,15 @@ class Snake():
             self.segments.append(new_segment)
         
     def move(self):
-        """Links the segments, the first segment moves forward constantly and the rest just follows"""
-        for seg_num in range(len(self.segments) - 1, 0, -1):
-            new_x = self.segments[seg_num - 1].xcor()
-            new_y = self.segments[seg_num - 1].ycor()
-            self.segments[seg_num].goto(new_x, new_y)
-        self.segments[0].forward(20)
+        """Links the segments, the first segment moves forward constantly and the rest just follows, only if snake is alive"""
+        if self.snake_alive:
+            for seg_num in range(len(self.segments) - 1, 0, -1):
+                new_x = self.segments[seg_num - 1].xcor()
+                new_y = self.segments[seg_num - 1].ycor()
+                self.segments[seg_num].goto(new_x, new_y)
+            self.segments[0].forward(20)
+    def die(self):
+        self.snake_alive = False
        
     def turn(self, direction):
         # turns the head
