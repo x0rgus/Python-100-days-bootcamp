@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import ScoreTurtle
 import time
 
 screenwidth = 600
@@ -25,13 +26,20 @@ REFRESHRATE = 0.1
 screen.listen()
 
 # Game configs
+scoreboard = ScoreTurtle(screenwidth, screenheight)
+
 def tickrate():
     screen.update()
     time.sleep(REFRESHRATE)
+    scoreboard.update()
+
 
     if snake.segments[0].distance(food) < 15:
         print("nom nom nom ")
         food.refresh()
+        scoreboard.addscore()
+
+
 
 
 screen.onkeypress(fun=lambda: snake.turn(direction="Left"), key="a")
