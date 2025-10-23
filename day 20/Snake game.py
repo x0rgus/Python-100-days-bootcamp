@@ -3,7 +3,7 @@ from snake import Snake
 import time
 
 # Snake Setup
-snake = Snake()
+snake = Snake(debug=True)
 snake.create_snake()
 
 # Screen setup
