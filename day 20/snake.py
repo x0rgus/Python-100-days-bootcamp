@@ -24,23 +24,38 @@ class Snake():
         """Creates a snake and sets it status to alive, creates the body and appends it to the segments"""
         self.log("Creating a snake")
         self.snake_alive = True
+        
+        self.log("Generating segments...")
+        self.log(f"Starting positions: {self.starting_positions}")
+        
         for position in self.starting_positions:
             new_segment = Turtle("square")
             new_segment.penup()
             new_segment.color("white")
             new_segment.goto(position)
             self.segments.append(new_segment)
+            
+            self.log(f"[{position}]New segment created:{new_segment}")
+        self.log(f"Snake created: {self.segments}")
         
     def move(self):
         """Links the segments, the first segment moves forward constantly and the rest just follows, only if snake is alive"""
+        self.log("Moving snake...")
+
         if self.snake_alive:
             for seg_num in range(len(self.segments) - 1, 0, -1):
                 new_x = self.segments[seg_num - 1].xcor()
                 new_y = self.segments[seg_num - 1].ycor()
                 self.segments[seg_num].goto(new_x, new_y)
             self.segments[0].forward(20)
+        self.log("Done")
     def die(self):
+        """Kills the snake"""
+        self.log("Killing snake...")
+
         self.snake_alive = False
+
+        self.log("done")
        
     def turn(self, direction):
         # turns the head
