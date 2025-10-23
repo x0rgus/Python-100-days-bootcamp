@@ -21,7 +21,7 @@ screen.setup(screenwidth, screenheight)
 screen.bgcolor("black")
 screen.title("snake game")
 screen.tracer(0)
-REFRESHRATE = 0.4
+REFRESHRATE = 0.1
 screen.listen()
 
 # Game configs
@@ -31,6 +31,7 @@ def tickrate():
 
     if snake.segments[0].distance(food) < 15:
         print("nom nom nom ")
+        food.refresh()
 
 
 screen.onkeypress(fun=lambda: snake.turn(direction="Left"), key="a")
